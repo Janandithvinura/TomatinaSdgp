@@ -1,2 +1,2 @@
-# TomatinaSdgp
- An application to detect tomato leaf diseases common in Sri Lanka using image processing.
+# Tomatina
+An application to detect tomato leaf diseases common in Sri Lanka using image processing.
