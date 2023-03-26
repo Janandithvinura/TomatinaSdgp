@@ -1,0 +1,29 @@
+{
+    "capture_image": "Get Image",
+    "view_diseases": "View Diseases",
+    "planting-tutorials":"Planting Tutorials",
+    
+    "early_blight": "Early Blight",
+    "late_blight": "Late Blight",
+    "septorial_leaf": "Septorial Leaf Spot",
+    "target_Spot": "Target Spot",
+    "yellow_leaf":"Yellow Leaf Curl Virus",
+
+    "tutorial": "Tutorial",
+    "resources": "1. Resources",
+    "resources_text": "1. Certified seeds\n2. Compost\n3. Virgin top soil\n4. Qur dust\n5. Sand\n6. pot\n7. Fungicides",
+    "seeds": "Seeds",
+    "seeds_text": "Step 2",
+    "soil": "Soil Complex",
+    "soil_text": "Step 3 git ",
+    "seedtreatment": "Seed Treatment",
+    "seedtreatment_text": "Step 4",
+    "plantingpot": "Planting Pots",
+    "plantingpot_text": "Step 5",
+    "wartering": "Watering",
+    "wartering_text": "Step 6",
+    "germination": "Germination and Treatments",
+    "germination_text": "Step 7",
+    "Replanting": "Replanting in field",
+    "step_8_text": "Step 8"
+}
