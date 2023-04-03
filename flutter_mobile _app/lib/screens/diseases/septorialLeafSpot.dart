@@ -152,9 +152,9 @@ class SeptorialLeafSpotScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Description''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('description'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -164,9 +164,10 @@ class SeptorialLeafSpotScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''Septoria leaf spot is caused by the fungus Septoria Lycopersicon. This fungus can attack tomatoes at any stage of development, but symptoms usually first appear on the older, lower leaves and stems when plants are setting fruit. Symptoms usually appear on leaves, but can occur on petioles, stems, and the calyx.''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('septorial_leaf_des'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -189,9 +190,9 @@ class SeptorialLeafSpotScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Cure''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('cure'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -201,9 +202,10 @@ class SeptorialLeafSpotScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''If you think this project seems interesting and you want to contribute or need some help implementing it,h!''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('septorial_leaf_cure'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -214,6 +216,18 @@ class SeptorialLeafSpotScreen extends StatelessWidget {
                           height: 30,
                         ),
                       ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(
+                      top: 10,
+                      bottom: 10,
+                    ),
+                    alignment: Alignment.bottomCenter,
+                    child: FloatingActionButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      backgroundColor: Colors.red,
+                      child: const Icon(Icons.arrow_back_ios_new),
                     ),
                   ),
                 ],

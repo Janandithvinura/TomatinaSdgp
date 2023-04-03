@@ -146,9 +146,9 @@ class YellowLeafScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Description''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('description'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -158,9 +158,10 @@ class YellowLeafScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''Tomato yellow leaf curl virus (TYLCV) is a DNA virus from the genus Begomovirus and the family Geminiviridae. TYLCV causes the most destructive disease of tomato, and it can be found in tropical and subtropical regions causing severe economic losses. This virus is transmitted by an insect vector from the family Aleyrodidae and order Hemiptera, the whitefly Bemisia tabaci, commonly known as the silverleaf whitefly or the sweet potato whitefly.''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('yellow_leaf_des'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -183,9 +184,9 @@ class YellowLeafScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Cure''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('cure'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -195,9 +196,10 @@ class YellowLeafScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''If you think this project seems interesting and you want to contribute or need some help implementing it,h!''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('yellow_leaf_cure'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -208,6 +210,18 @@ class YellowLeafScreen extends StatelessWidget {
                           height: 30,
                         ),
                       ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(
+                      top: 10,
+                      bottom: 10,
+                    ),
+                    alignment: Alignment.bottomCenter,
+                    child: FloatingActionButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      backgroundColor: Colors.red,
+                      child: const Icon(Icons.arrow_back_ios_new),
                     ),
                   ),
                 ],

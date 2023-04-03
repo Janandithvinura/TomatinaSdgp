@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "853508180400",
+    "firebase_url": "https://tomatina-c2d66-default-rtdb.firebaseio.com",
+    "project_id": "tomatina-c2d66",
+    "storage_bucket": "tomatina-c2d66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853508180400:android:cdbe870ffa7c0fbf5bee75",
+        "android_client_info": {
+          "package_name": "com.example.tomatina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853508180400-00mc7rmqee80gmoo98590237v2la74pi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJCyDRj_nFLyTfciCXFGxRpDSpZ4nJblM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853508180400-00mc7rmqee80gmoo98590237v2la74pi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

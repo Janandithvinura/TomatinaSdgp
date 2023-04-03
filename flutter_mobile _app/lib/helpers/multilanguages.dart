@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -49,7 +48,7 @@ class MultiLanguagesDelegate extends LocalizationsDelegate<MultiLanguages> {
   @override
   bool isSupported(Locale locale) {
     // Include all of your supported language codes here
-    return ['en', 'si'].contains(locale.languageCode);
+    return ['en', 'si', 'ta'].contains(locale.languageCode);
   }
 
   @override

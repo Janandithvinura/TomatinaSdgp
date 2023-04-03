@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -11,14 +12,23 @@ import 'package:tomatina/screens/diseases/septorialLeafSpot.dart';
 import 'package:tomatina/screens/diseases/targetspot.dart';
 import 'package:tomatina/screens/diseases/yellowleaf.dart';
 import 'package:tomatina/screens/home/homepage.dart';
-import 'package:tomatina/screens/login/welcomeScreen.dart';
+import 'package:tomatina/screens/login/forgot.dart';
+import 'package:tomatina/screens/login/LanguageScreen.dart';
+import 'package:tomatina/screens/login/LanguageScreen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tomatina/screens/login/welcomeScreen.dart';
+import 'package:tomatina/screens/outputs/healthy.dart';
+import 'package:tomatina/screens/outputs/notFound.dart';
 import 'package:tomatina/screens/tutorials/tutorial.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'helpers/appLanguages.dart';
+import 'screens/login/login.dart';
+import 'screens/login/signup.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -32,10 +42,13 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   final AppLanguage appLanguage;
-  MyApp({required this.appLanguage});
+
+  // ignore: use_key_in_widget_constructors
+  const MyApp({required this.appLanguage});
 
   @override
   Widget build(BuildContext context) {
+    final _auth = FirebaseAuth.instance;
     return ChangeNotifierProvider<AppLanguage>(
         create: (ctx) => appLanguage,
         child: Consumer<AppLanguage>(builder: (context, model, child) {
@@ -45,9 +58,15 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: const WelcomeScreen(),
+            home: _auth.currentUser != null
+                ? const LanguageScreen()
+                : const WelcomeScreen(),
             routes: {
               WelcomeScreen.routeName: (context) => const WelcomeScreen(),
+              SigninScreen.routeName: (context) => SigninScreen(),
+              RegistrationScreen.routeName: (context) =>
+                  const RegistrationScreen(),
+              LanguageScreen.routeName: (context) => const LanguageScreen(),
               HomeScreen.routeName: (context) => const HomeScreen(),
               TutorialScreen.routeName: (context) => const TutorialScreen(),
               // ignore: equal_keys_in_map
@@ -59,10 +78,14 @@ class MyApp extends StatelessWidget {
               SeptorialLeafSpotScreen.routeName: (context) =>
                   const SeptorialLeafSpotScreen(),
               YellowLeafScreen.routeName: (context) => const YellowLeafScreen(),
+              HealthyScreen.routeName: (context) => const HealthyScreen(),
+              NotFoundScreen.routeName: (context) => const NotFoundScreen(),
+              ForgotScreen.routeName: (context) => const ForgotScreen(),
             },
             supportedLocales: const [
               Locale('en', 'US'),
               Locale('si', ''),
+              Locale('ta', ''),
             ],
             localizationsDelegates: const [
               MultiLanguages.delegate,

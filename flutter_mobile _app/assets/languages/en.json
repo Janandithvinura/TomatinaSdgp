@@ -9,21 +9,48 @@
     "target_Spot": "Target Spot",
     "yellow_leaf":"Yellow Leaf Curl Virus",
 
+    "description":"Description",
+    "cure":"Cure",
+
+    "early_blight_des": "Early blight is caused by the fungus Alternaria solani and occurs throughout the Sri lanka. Symptoms first appear on the lower, older leaves as small brown spots with concentric rings that form a “bull’s eye” pattern. As the disease matures, it spreads outward on the leaf surface causing it to turn yellow, wither and die. Eventually the stem, fruit and upper portion of the plant will become infected. Crops can be severely damaged.",
+    "late_blight_des": "Leaf symptoms of late blight first appear as small, water-soaked areas that rapidly enlarge to form purple-brown, oily-appearing blotches. On the lower side of leaves, rings of grayish white mycelium and spore-forming structures may appear around the blotches",
+    "septorial_leaf_des": "Septoria leaf spot is caused by the fungus Septoria Lycopersicon. This fungus can attack tomatoes at any stage of development, but symptoms usually first appear on the older, lower leaves and stems when plants are setting fruit. Symptoms usually appear on leaves, but can occur on petioles, stems, and the calyx.",
+    "target_Spot_des": "Target spot of tomato caused by Corynespora cassiicola, is a serious foliar disease of both greenhouse and field grown tomatoes. The field disease is limited to the tropical and subtropical regions of the world. The pathogen is identified primarily by the occurrence of indeterminate conidiophores with apically budding, multiple pseudoseptate conidia.",
+    "yellow_leaf_des":"Tomato yellow leaf curl virus (TYLCV) is a DNA virus from the genus Begomovirus and the family Geminiviridae. TYLCV causes the most destructive disease of tomato, and it can be found in tropical and subtropical regions causing severe economic losses. This virus is transmitted by an insect vector from the family Aleyrodidae and order Hemiptera, the whitefly Bemisia tabaci, commonly known as the silverleaf whitefly or the sweet potato whitefly.",
+    
+    "early_blight_cure": "Thoroughly spray the plant (bottoms of leaves also) with Bonide Liquid Copper Fungicide concentrate or Bonide Tomato & Vegetable. Both of these treatments are organic",
+    "late_blight_cure": "Spraying fungicides is the most effective way to prevent late blight. For conventional gardeners and commercial producers, protectant fungicides such as chlorothalonil (e.g., Bravo, Echo, Equus, or Daconil) and Mancozeb (Manzate) can be used",
+    "septorial_leaf_cure": "Spraying fungicides is the most effective way to prevent \n• Daconil    15- 30 ml/10L \n• Mancozeb    20 ml/10L \n• Topsin    6g/10L \n• Carbandazim    7g/10L",
+    "target_Spot_cure": "Suitable fungicides under testing",
+    "yellow_leaf_cure":"• Eliminating weeds \n• Remove the old crop debris",
+
     "tutorial": "Tutorial",
     "resources": "1. Resources",
     "resources_text": "1. Certified seeds\n2. Compost\n3. Virgin top soil\n4. Qur dust\n5. Sand\n6. pot\n7. Fungicides",
     "seeds": "Seeds",
-    "seeds_text": "Step 2",
+    "seeds_text": "Select certified & germination tested seeds",
     "soil": "Soil Complex",
-    "soil_text": "Step 3 git ",
+    "soil_text": "1. Compost - 25%\n2. Virgin top soil - 25%\n3. Qur dust - 25%\n4. Sand - 25% ",
     "seedtreatment": "Seed Treatment",
-    "seedtreatment_text": "Step 4",
+    "seedtreatment_text": "Apply 2g of a fungicide (Captan or Thiram) to 125g of seeds.",
     "plantingpot": "Planting Pots",
-    "plantingpot_text": "Step 5",
+    "plantingpot_text": "Use 2 X 2 gardening pot & add seeds per a pot.",
     "wartering": "Watering",
-    "wartering_text": "Step 6",
+    "wartering_text": "After planting seeds we have to watering water 10ml to pots morning and evening 3 days continually",
     "germination": "Germination and Treatments",
-    "germination_text": "Step 7",
+    "germination_text": "- Within 7 days seeds are germinated.\n- Use fungicides and insecticide according to regulations\n- Add liquid fertilizers once a week respectively for a month use NPK complex",
     "Replanting": "Replanting in field",
-    "step_8_text": "Step 8"
+    "Replant_text": "After 25 days replant in the soil.",
+
+    "Healthy": "Healthy",
+    "Healthy_text": "Healthy Plant",
+    "Healthy_des": "This is a healthy plant. Always keep the cultivation free of weeds. It will reduce the risk of pest attack and disease infection. When plants are young specially 3-6 weeks after transplant, remove weeds by hand around the plants. And also weeding should be done before apply fertilizers. ",
+
+    "NotFound": "Not Found",
+    "NotFound_text": "Error",
+    "NotFound_des": "This image is not recognized by the model. Please re check the uploaded image "
+
+ 
+
+
 }

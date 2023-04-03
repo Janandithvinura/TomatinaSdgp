@@ -145,9 +145,9 @@ class TargetSpotScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Description''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('description'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -157,9 +157,10 @@ class TargetSpotScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''Target spot of tomato caused by Corynespora cassiicola, is a serious foliar disease of both greenhouse and field grown tomatoes. The field disease is limited to the tropical and subtropical regions of the world. The pathogen is identified primarily by the occurrence of indeterminate conidiophores with apically budding, multiple pseudoseptate conidia.''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('target_Spot_des'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -182,9 +183,9 @@ class TargetSpotScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Cure''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('cure'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -194,9 +195,10 @@ class TargetSpotScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''If you think this project seems interesting and you want to contribute or need some help implementing it,h!''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('target_Spot_cure'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -207,6 +209,18 @@ class TargetSpotScreen extends StatelessWidget {
                           height: 30,
                         ),
                       ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(
+                      top: 10,
+                      bottom: 10,
+                    ),
+                    alignment: Alignment.bottomCenter,
+                    child: FloatingActionButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      backgroundColor: Colors.red,
+                      child: const Icon(Icons.arrow_back_ios_new),
                     ),
                   ),
                 ],

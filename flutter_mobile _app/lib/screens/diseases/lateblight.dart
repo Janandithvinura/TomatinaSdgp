@@ -172,9 +172,9 @@ class LateBlightScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Description''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('description'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -184,9 +184,10 @@ class LateBlightScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          ''' Leaf symptoms of late blight first appear as small, water-soaked areas that rapidly enlarge to form purple-brown, oily-appearing blotches. On the lower side of leaves, rings of grayish white mycelium and spore-forming structures may appear around the blotches''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('late_blight_des'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -209,9 +210,9 @@ class LateBlightScreen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Cure''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('cure'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -221,9 +222,10 @@ class LateBlightScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''If you think this project seems interesting and you want to contribute or need some help implementing it,h!''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('late_blight_cure'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -234,6 +236,18 @@ class LateBlightScreen extends StatelessWidget {
                           height: 30,
                         ),
                       ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(
+                      top: 10,
+                      bottom: 10,
+                    ),
+                    alignment: Alignment.bottomCenter,
+                    child: FloatingActionButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      backgroundColor: Colors.red,
+                      child: const Icon(Icons.arrow_back_ios_new),
                     ),
                   ),
                 ],

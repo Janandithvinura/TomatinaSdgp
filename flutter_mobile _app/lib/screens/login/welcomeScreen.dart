@@ -3,11 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tomatina/screens/home/homepage.dart';
+import 'package:tomatina/screens/login/login.dart';
+import 'package:tomatina/screens/login/signup.dart';
 
 import '../../helpers/appLanguages.dart';
+import 'LanguageScreen.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  static const routeName = '/welcome-screen';
+  static const routeName = '/frontlogin-screen';
 
   const WelcomeScreen({Key? key}) : super(key: key);
 
@@ -30,7 +33,6 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var appLanguage = Provider.of<AppLanguage>(context);
     return Scaffold(
       body: Stack(
         children: [
@@ -47,19 +49,31 @@ class WelcomeScreen extends StatelessWidget {
               Expanded(
                 flex: 6,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 60, left: 25),
+                  padding: const EdgeInsets.only(top: 35, left: 35),
                   child: Column(
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      const Text(
-                        'TOMATINA',
-                        style: TextStyle(
-                            fontSize: 55,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Container(
+                        height: 80,
+                        width: 80,
+                        margin: const EdgeInsets.all(6.0),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          image: const DecorationImage(
+                            image: AssetImage('assets/images/logo3.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
                       ),
                       const Text(
-                        'Powerd by Kil-A-Bytes',
+                        'Tomatina',
+                        style: TextStyle(
+                            fontSize: 45,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red),
+                      ),
+                      const Text(
+                        '   By Kil-A-Bytes',
                         style: TextStyle(
                             fontSize: 18,
                             fontStyle: FontStyle.italic,
@@ -85,12 +99,10 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                         color: Colors.transparent.withOpacity(0.5),
                         // ignore: prefer_const_constructors
-                        onPressed: () {
-                          appLanguage.changeLanguage(const Locale("en"));
-                          Navigator.of(context).pushNamed(HomeScreen.routeName);
-                        },
+                        onPressed: () => Navigator.of(context)
+                            .pushNamed(SigninScreen.routeName),
                         child: const Text(
-                          'English',
+                          'Sign in',
                           // ignore: prefer_const_constructors
                           style: TextStyle(
                             fontSize: 20,
@@ -113,13 +125,11 @@ class WelcomeScreen extends StatelessWidget {
                         color: Colors.transparent.withOpacity(0.5),
 
                         // ignore: prefer_const_constructors
-                        onPressed: () {
-                          appLanguage.changeLanguage(const Locale("si"));
-                          Navigator.of(context).pushNamed(HomeScreen.routeName);
-                        },
+                        onPressed: () => Navigator.of(context)
+                            .pushNamed(RegistrationScreen.routeName),
                         // ignore: prefer_const_constructors
                         child: Text(
-                          'සිංහල',
+                          'Sign up',
                           style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,

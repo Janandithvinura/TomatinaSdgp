@@ -1,245 +1,302 @@
-// ignore_for_file: unnecessary_this
+import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:persist_theme/persist_theme.dart';
-import 'package:provider/provider.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+import 'LanguageScreen.dart';
+import 'forgot.dart';
 
+//code for designing the UI of our text field where the user writes his email id or password
+
+const kTextFieldDecoration = InputDecoration(
+    hintText: 'Enter a value',
+    hintStyle: TextStyle(color: Colors.grey),
+    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.all(Radius.circular(32.0)),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.lightBlueAccent, width: 1.0),
+      borderRadius: BorderRadius.all(Radius.circular(32.0)),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
+      borderRadius: BorderRadius.all(Radius.circular(32.0)),
+    ));
+
+class SigninScreen extends StatefulWidget {
+  static const routeName = '/signin-screen';
+
+  SigninScreen({Key? key}) : super(key: key);
   @override
-  _LoginState createState() => _LoginState();
+  // ignore: library_private_types_in_public_api
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginState extends State<Login> {
-  final usernameController = TextEditingController();
-  final passwordController = TextEditingController();
+final _auth = FirebaseAuth.instance;
 
-  final resetPasswordController = TextEditingController();
-  final resetPasswordConfirmController = TextEditingController();
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
-  late FocusNode userNameFocusNode;
-  late FocusNode passwordFocusNode;
-
-  late FocusNode resetPasswordNode;
-  late FocusNode resetPasswordConfirmNode;
-
-  bool obscureText = true;
-
-  @override
-  void initState() {
-    super.initState();
-    userNameFocusNode = FocusNode();
-    passwordFocusNode = FocusNode();
-  }
-
+class _LoginScreenState extends State<SigninScreen> {
+  late String email;
+  late String password;
+  bool passwordVisible = true;
+  bool showSpinner = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        key: const Key('login_screen_widget'),
-        child: Stack(children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                // ignore: prefer_const_constructors
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  // ignore: prefer_const_constructors
-                  child: Text('Login',
-                      style: const TextStyle(
-                          fontSize: 20,
+      body: Stack(
+        children: <Widget>[
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/tomatina.jpg'),
+                  fit: BoxFit.cover),
+            ),
+          ),
+          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Expanded(
+              flex: 6,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 35, left: 35),
+                child: Column(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    Container(
+                      height: 80,
+                      width: 80,
+                      margin: const EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          image: const DecorationImage(
+                            image: AssetImage('assets/images/logo3.png'),
+                            fit: BoxFit.fill,
+                          )),
+                    ),
+                    const Text(
+                      'Tomatina',
+                      style: TextStyle(
+                          fontSize: 45,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange)),
+                          color: Colors.red),
+                    ),
+                    const Text(
+                      '   By Kil-A-Bytes',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.white),
+                    ),
+                  ],
                 ),
-                Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 20),
-                    height: MediaQuery.of(context).size.height * 0.6,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
+              ),
+            ),
+          ]),
+          SingleChildScrollView(
+            child: Container(
+              color: Colors.transparent,
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const <Widget>[
+                      Padding(padding: EdgeInsets.only(top: 50.0)),
+                    ],
+                  ),
+
+                  // ignore: unnecessary_new
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(top: 200, right: 40, left: 40),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(left: 15),
-                              width: MediaQuery.of(context).size.width * 0.3,
-                              child: const Divider(thickness: 2),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          textAlign: TextAlign.center,
+                          cursorColor: Colors.black,
+                          onChanged: (value) {
+                            email = value;
+                            //Do something with the user input.
+                          },
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white.withOpacity(0.8),
+                            hintText: 'Enter your email',
+                            contentPadding: const EdgeInsets.only(
+                                left: 14.0, bottom: 8.0, top: 8.0),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.white.withOpacity(0.5)),
+                              //borderRadius: BorderRadius.circular(25.7),
                             ),
-                            const Text('OR',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.deepOrange)),
-                            Container(
-                                padding: const EdgeInsets.only(right: 15),
-                                width: MediaQuery.of(context).size.width * 0.3,
-                                child: const Divider(thickness: 2)),
-                          ],
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.white.withOpacity(0.5)),
+                              //borderRadius: BorderRadius.circular(25.7),
+                            ),
+                          ),
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 10.0,
                         ),
-                        _formWidget(),
+                        TextField(
+                          obscureText: passwordVisible,
+                          textAlign: TextAlign.center,
+                          onChanged: (value) {
+                            password = value;
+                            //Do something with the user input.
+                          },
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white.withOpacity(0.8),
+                            hintText: 'Enter your password.',
+                            suffixIcon: IconButton(
+                              icon: Icon(passwordVisible
+                                  ? Icons.visibility_off
+                                  : Icons.visibility),
+                              onPressed: () {
+                                setState(
+                                  () {
+                                    passwordVisible = !passwordVisible;
+                                  },
+                                );
+                              },
+                            ),
+                            contentPadding: const EdgeInsets.only(
+                                left: 14.0, bottom: 8.0, top: 8.0),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.white.withOpacity(0.5)),
+                              //borderRadius: BorderRadius.circular(25.7),
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.white.withOpacity(0.5)),
+                              //borderRadius: BorderRadius.circular(25.7),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 24.0,
+                        ),
+                        SizedBox(
+                          height: 50,
+                          child: RaisedButton(
+                            elevation: 0,
+
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            color: Colors.transparent.withOpacity(0.5),
+                            // ignore: prefer_const_constructors
+                            onPressed: () async {
+                              setState(() {
+                                showSpinner = true;
+                              });
+                              try {
+                                int num = email.length;
+                              } catch (e) {
+                                showSpinner = false;
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text('Please enter a Email')),
+                                );
+                                return;
+                              }
+
+                              try {
+                                int num = password.length;
+                              } catch (e) {
+                                showSpinner = false;
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text('Please enter a password')),
+                                );
+                                return;
+                              }
+
+                              final bool emailValid = RegExp(
+                                      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+                                  .hasMatch(email);
+                              if (!emailValid) {
+                                showSpinner = false;
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content:
+                                          Text('Please enter a valid email')),
+                                );
+                                return;
+                              }
+                              try {
+                                final user =
+                                    await _auth.signInWithEmailAndPassword(
+                                        email: email, password: password);
+                                log('useruseruseruser: $user');
+
+                                if (user != null) {
+                                  // ignore: use_build_context_synchronously
+                                  Navigator.of(context)
+                                      .pushNamed(LanguageScreen.routeName);
+                                }
+                              } catch (error) {
+                                log('userloginerror: $error');
+                                final validErrorMessage =
+                                    error.toString().split(']');
+
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text(validErrorMessage[1])),
+                                );
+                              }
+                              setState(() {
+                                showSpinner = false;
+                              });
+                            },
+                            child: const Text(
+                              'Sign in',
+                              // ignore: prefer_const_constructors
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          child: const Text('Forgot Password?',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                              textAlign: TextAlign.center),
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, ForgotScreen.routeName);
+                          },
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(
+                            top: 50,
+                          ),
+                          alignment: Alignment.bottomCenter,
+                          child: FloatingActionButton(
+                            heroTag: 'btn2',
+                            onPressed: () => Navigator.of(context).pop(),
+                            backgroundColor: Colors.red,
+                            child: const Icon(Icons.arrow_back_ios_new),
+                          ),
+                        ),
                       ],
-                    ))
-              ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          )
-        ]),
-      ),
-      bottomNavigationBar: InkWell(
-        onTap: () {
-          if (_formKey.currentState!.validate()) {
-            _authenticate();
-          }
-        },
-        child: Container(
-          height: MediaQuery.of(context).size.height * 0.07,
-          color: Colors.deepOrange,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              const Text('Login',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.deepOrange))
-            ],
           ),
-        ),
+        ],
       ),
     );
   }
-
-  Widget _formWidget() {
-    return Form(
-        key: _formKey,
-        child: Column(
-          children: <Widget>[
-            AnimatedSwitcher(
-                duration: const Duration(milliseconds: 1000),
-                child: _basicLogin())
-          ],
-        ));
-  }
-
-  Widget _basicLogin() {
-    ThemeModel themeModel = Provider.of<ThemeModel>(context, listen: false);
-    return Column(
-      children: [
-        _usernameField(),
-        const SizedBox(
-          height: 20,
-        ),
-        _passwordField(),
-      ],
-    );
-  }
-
-  Widget _usernameField() {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.9,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: TextFormField(
-        textAlign: TextAlign.start,
-        controller: usernameController,
-        focusNode: userNameFocusNode,
-        textInputAction: TextInputAction.next,
-        onFieldSubmitted: (username) {
-          if (_formKey.currentState!.validate()) {
-            userNameFocusNode.unfocus();
-            FocusScope.of(context).requestFocus(passwordFocusNode);
-          }
-        },
-        decoration: const InputDecoration(
-          contentPadding:
-              EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-          hintText: 'Login',
-          hintStyle: TextStyle(color: Colors.grey),
-          fillColor: Colors.white,
-          border: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: Colors.grey),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: Colors.grey),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: Colors.grey),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: Colors.red),
-          ),
-        ),
-        //validator: UserNameFieldValidator.validate,
-        keyboardType: TextInputType.text,
-        style: const TextStyle(color: Colors.grey),
-      ),
-    );
-  }
-
-  Widget _passwordField() {
-    return Container(
-        width: MediaQuery.of(context).size.width * 0.9,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: TextFormField(
-          textAlign: TextAlign.start,
-          controller: passwordController,
-          focusNode: passwordFocusNode,
-          textInputAction: TextInputAction.done,
-          onFieldSubmitted: (term) {
-            if (_formKey.currentState!.validate()) {
-              _authenticate();
-            }
-          },
-          obscureText: obscureText,
-          decoration: const InputDecoration(
-            contentPadding:
-                EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-            hintText: 'Password',
-            hintStyle: TextStyle(color: Colors.grey),
-            fillColor: Colors.white,
-            border: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.grey),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.grey),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.grey),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.red),
-            ),
-            // suffixIcon: InkWell(
-            //   onTap: () {},
-            //   child: Icon(Icons.remove_red_eye, color: Colors.black),
-            // )
-          ),
-          //validator: PasswordFieldValidator.validate,
-          keyboardType: TextInputType.text,
-          style: const TextStyle(color: Colors.grey),
-        ));
-  }
-
-  _authenticate() async {}
 }

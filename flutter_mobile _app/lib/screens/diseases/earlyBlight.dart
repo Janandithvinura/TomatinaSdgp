@@ -160,9 +160,9 @@ class Disease1Screen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Description''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('description'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -172,9 +172,10 @@ class Disease1Screen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          ''' Early blight is caused by the fungus Alternaria solani and occurs throughout the Sri lanka. Symptoms first appear on the lower, older leaves as small brown spots with concentric rings that form a “bull’s eye” pattern. As the disease matures, it spreads outward on the leaf surface causing it to turn yellow, wither and die. Eventually the stem, fruit and upper portion of the plant will become infected. Crops can be severely damaged.''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('early_blight_des'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -197,9 +198,9 @@ class Disease1Screen extends StatelessWidget {
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
-                          '''Cure''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!.translate('cure'),
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -209,9 +210,10 @@ class Disease1Screen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
-                          '''If you think this project seems interesting and you want to contribute or need some help implementing it,h!''',
-                          style: TextStyle(
+                        Text(
+                          MultiLanguages.of(context)!
+                              .translate('early_blight_cure'),
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -222,6 +224,18 @@ class Disease1Screen extends StatelessWidget {
                           height: 30,
                         ),
                       ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(
+                      top: 10,
+                      bottom: 10,
+                    ),
+                    alignment: Alignment.bottomCenter,
+                    child: FloatingActionButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      backgroundColor: Colors.red,
+                      child: const Icon(Icons.arrow_back_ios_new),
                     ),
                   ),
                 ],
