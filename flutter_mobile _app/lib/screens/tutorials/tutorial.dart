@@ -90,33 +90,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/resources.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/resources.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
@@ -165,33 +142,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/seeds.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/seeds.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
@@ -240,33 +194,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/soil complex.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/soil complex.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
@@ -316,33 +247,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/treatment.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/treatment.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
@@ -392,33 +300,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/plantingPot.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/plantingPot.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
@@ -468,33 +353,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/watering.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/watering.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
@@ -543,33 +405,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/germination.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/germination.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
@@ -619,33 +458,10 @@ class TutorialScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/tutorial/replanting.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: false,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                  ),
+                Image.asset(
+                  'assets/tutorial/replanting.jpg',
+                  fit: BoxFit.contain,
+                  height: 200,
                 ),
                 Container(
                   margin: const EdgeInsets.all(20),
