@@ -117,6 +117,15 @@ flutter:
     - assets/model/label.txt
     - assets/model/model.tflite
 
+    - assets/tutorial/germination.jpg
+    - assets/tutorial/plantingPot.jpg
+    - assets/tutorial/replanting.jpg
+    - assets/tutorial/resources.jpg
+    - assets/tutorial/seeds.jpg
+    - assets/tutorial/soil complex.jpg
+    - assets/tutorial/treatment.jpg
+    - assets/tutorial/watering.jpg
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

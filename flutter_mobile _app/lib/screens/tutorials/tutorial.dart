@@ -98,55 +98,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/resources.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -221,55 +173,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/seeds.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -344,55 +248,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/soil complex.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -468,55 +324,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/treatment.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -592,55 +400,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/plantingPot.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -716,55 +476,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/watering.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -839,55 +551,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/germination.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -963,55 +627,7 @@ class TutorialScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image4.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    //5th Image of Slider
-                    Container(
-                      margin: const EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/SeptorialSpot/image5.jpg'),
+                          image: AssetImage('assets/tutorial/replanting.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
