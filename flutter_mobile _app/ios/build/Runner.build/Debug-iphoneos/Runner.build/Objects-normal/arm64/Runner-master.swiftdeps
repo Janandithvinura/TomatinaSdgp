@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "685dbdac19cd8733223ade009a586d4af6f64aebcaabb68f29033a23c53f3582"
+build_start_time: [1680725879, 998397827]
+build_end_time: [1680725880, 101891994]
+inputs:
+  "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Runner/AppDelegate.swift": !private [1680723577, 336276531]

@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/build/Debug-iphoneos/shared_preferences_foundation/shared_preferences_foundation.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/build/Pods.build/Debug-iphoneos/shared_preferences_foundation.build/unextended-module.modulemap",
+    }]
+  }]
+}
