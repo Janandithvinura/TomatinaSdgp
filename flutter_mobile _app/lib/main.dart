@@ -59,8 +59,8 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
             ),
             home: _auth.currentUser != null
-                ? const LanguageScreen()
-                : const WelcomeScreen(),
+                ? const WelcomeScreen()
+                : const LanguageScreen(),
             routes: {
               WelcomeScreen.routeName: (context) => const WelcomeScreen(),
               SigninScreen.routeName: (context) => SigninScreen(),

@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/build/Debug-iphoneos/modal_progress_hud_nsn/modal_progress_hud_nsn.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/build/Pods.build/Debug-iphoneos/modal_progress_hud_nsn.build/unextended-module.modulemap",
+    }]
+  }]
+}

@@ -1,0 +1,27 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "dd38c5608162e920bfa6e04f2ddfdc30c1e9c314064b251ec2234deda5338507"
+build_start_time: [1680725795, 458351135]
+build_end_time: [1680725803, 201061010]
+inputs:
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift"
+  : [1680713606, 664453029]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift"
+  : [1680713606, 665036678]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift"
+  : [1680713606, 665408611]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift"
+  : [1680713606, 665599346]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift"
+  : [1680713606, 665966510]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift"
+  : [1680713606, 664653778]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift"
+  : [1680713606, 664184093]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift"
+  : [1680713606, 666134357]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift"
+  : [1680713606, 665795803]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
+  : [1680713606, 664855957]
+  ? "/Users/dinalpasindu/Documents/github/TomatinaSdgp/flutter_mobile _app/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift"
+  : [1680713606, 665231704]

@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "161fac9d2eeda89947c8b0b3cdfec7149efb1ad05cff6c3ed501944df1324a7a"
+build_start_time: [1680725795, 458355903]
+build_end_time: [1680725803, 19667148]
+inputs:
+  ? "/Users/dinalpasindu/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/modal_progress_hud_nsn-0.3.0/ios/Classes/SwiftModalProgressHudNsnPlugin.swift"
+  : [1680631418, 547315120]
